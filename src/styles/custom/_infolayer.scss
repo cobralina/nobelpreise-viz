@@ -1,0 +1,66 @@
+/* custom styles */
+@use "../dv-globals/dv-globals" as *;
+
+.infolayer {
+  position: absolute;
+  top: 144px;
+  //left: 20px;
+  width: 400px;
+  max-height: 400px;
+  margin-left: 120px;
+  overflow-y: auto;
+  background-color: var(--dv-grey-700);
+  opacity: 0.9;
+  border-radius: 5px;
+  padding: 10px;
+  .infoicon-button {
+    float: right;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: -16px;
+  }
+  .subline {
+    font-family: $serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: -16px;
+    @media only screen and (max-width: $break-sm) {
+      font-size: 18px;
+    }
+  }
+  .headline {
+    font-family: $sans;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+    @media only screen and (max-width: $break-sm) {
+      font-size: 14px;
+    }
+  }
+  p {
+    font-family: $sans;
+    font-size: 16px;
+    margin-bottom: 0;
+    @media only screen and (max-width: $break-sm) {
+      font-size: 14px;
+    }
+  }
+  .info-flex-container {
+    .img-container {
+      margin-right: 10px;
+      float: left;
+      img {
+        max-width: 100px;
+        height: auto;
+        border-radius: 5px;
+      }
+      .img-credit {
+        font-size: 12px;
+        font-family: $sans;
+        text-align: left;
+      }
+    }
+  }
+}

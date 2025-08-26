@@ -1,0 +1,19 @@
+@use "dv-globals/dv-globals" as *;
+
+@use "custom/main" as *;
+
+@use "custom/header" as *;
+@use "custom/vizcontainer" as *;
+@use "custom/vizstyles" as *;
+@use "custom/infolayer" as *;
+
+#nobelpreise {
+  max-width: 800px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  background-color: var(--dv-white);
+  color: var(--dv-black);
+  font-family: $serif;
+}

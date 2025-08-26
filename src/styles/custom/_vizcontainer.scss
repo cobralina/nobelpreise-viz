@@ -1,0 +1,98 @@
+@use "../dv-globals/dv-globals" as *;
+
+.carousel {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  .siema {
+    overflow: hidden;
+    width: 100%;
+  }
+  .siema > div {
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .siema-item {
+    height: 650px;
+    width: 100%;
+    h2 {
+      font-family: $sans;
+      text-align: center;
+      font-size: 1em;
+      font-weight: 600;
+      @media only screen and (max-width: $break-sm) {
+        font-size: 0.9em;
+        font-weight: 400;
+      }
+    }
+    @media only screen and (max-width: $break-sm) {
+      height: 450px;
+    }
+    @media only screen and (max-width: 400px) {
+      height: 350px;
+    }
+  }
+}
+.bullet {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+
+  background-color: lightgrey;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+}
+input:checked {
+  background-color: grey;
+  width: 10px;
+  height: 10px;
+  top: 3px;
+}
+
+.btn-back,
+.btn-forward {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 52px;
+  height: 52px;
+  opacity: 1;
+  transition: opacity 0.3s;
+  :hover {
+    opacity: 0.5;
+  }
+}
+
+.btn-back {
+  margin-right: 10px;
+  background-image: url("/img/arrow-back-lm.svg");
+
+  @media (prefers-color-scheme: dark) {
+    background-image: url("/img/arrow-back-dm.svg");
+  }
+}
+.btn-forward {
+  margin-left: 10px;
+  background-image: url("/img/arrow-forward-lm.svg");
+  @media (prefers-color-scheme: dark) {
+    background-image: url("/img/arrow-forward-dm.svg");
+  }
+}

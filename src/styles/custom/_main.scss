@@ -1,0 +1,43 @@
+/* custom styles */
+@use "../dv-globals/dv-globals" as *;
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-weight: $serif-bold;
+}
+
+a {
+  @include dv-txtLink;
+}
+
+button {
+  @include dv-btnLink;
+}
+
+header {
+  @include dv-wgtHeader;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+g {
+  transform: translate(50%, 50%);
+  //opacity: 0.7;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.showrow {
+  margin: 4px 0;
+  padding: 5px;
+  color: var(--dv-white);
+  border-radius: 4px;
+  font-size: 12px;
+}
