@@ -1,5 +1,29 @@
 /* custom styles */
-@use "../dv-globals/dv-globals" as *;
+@use "@faz/dv-globals/scss/dv-globals.scss" as *;
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animated-circle {
+  //transition: opacity 0.3s;
+  animation: pulse 2s infinite;
+  &:hover {
+    opacity: 1;
+    transition: none;
+    animation: none;
+    stroke-width: 0.1;
+    stroke: grey;
+  }
+}
 
 .all-country-groups {
   display: flex;
@@ -77,5 +101,20 @@
     font-weight: 500;
     margin-top: -10px;
     margin-bottom: 10px;
+  }
+}
+
+.timeline {
+  width: 100%;
+  margin: auto;
+  overflow-y: auto;
+  scrollbar-width: none;
+  height: 600px;
+  h2 {
+    margin: 5px auto;
+    width: 100%;
+  }
+  svg {
+    height: 50px;
   }
 }

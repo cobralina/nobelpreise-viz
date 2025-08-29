@@ -1,4 +1,4 @@
-@use "../dv-globals/dv-globals" as *;
+@use "@faz/dv-globals/scss/dv-globals.scss" as *;
 
 .carousel {
   display: flex;
@@ -17,6 +17,7 @@
   .siema-item {
     height: 650px;
     width: 100%;
+    position: relative;
     h2 {
       font-family: $sans;
       text-align: center;

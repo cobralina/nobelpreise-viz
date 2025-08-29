@@ -8,6 +8,7 @@
   import ThemesGermans from "./ThemesGermans.svelte";
   import ResearchLocation from "./ResearchLocation.svelte";
   import Gender from "./Gender.svelte";
+  import Timeline from "./Timeline.svelte";
 
   // Typisierung
   let slider: Siema;
@@ -87,6 +88,10 @@
     <div class="siema-item">
       <h2>Geschlechterverteilung</h2>
       <Gender />
+    </div>
+    <div class="siema-item">
+      <h2>Zeitleiste</h2>
+      <Timeline />
     </div>
   </div>
 

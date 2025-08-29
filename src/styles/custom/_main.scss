@@ -1,5 +1,6 @@
 /* custom styles */
-@use "../dv-globals/dv-globals" as *;
+
+@use "@faz/dv-globals/scss/dv-globals.scss" as *;
 
 h1 {
   font-size: 3.2em;

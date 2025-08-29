@@ -1,18 +1,27 @@
 /* custom styles */
-@use "../dv-globals/dv-globals" as *;
+@use "@faz/dv-globals/scss/dv-globals.scss" as *;
 
 .infolayer {
   position: absolute;
   top: 144px;
   //left: 20px;
-  width: 400px;
+  width: 70%;
   max-height: 400px;
-  margin-left: 120px;
+  margin-left: 13.5%;
   overflow-y: auto;
   background-color: var(--dv-grey-700);
   opacity: 0.9;
   border-radius: 5px;
   padding: 10px;
+  @media only screen and (max-width: $break-sm) {
+    top: 50px;
+    max-height: 350px;
+    width: 90%;
+    margin-left: 2.5%;
+  }
+  @media only screen and (max-width: 400px) {
+    max-height: 250px;
+  }
   .infoicon-button {
     float: right;
     background: none;
@@ -44,7 +53,7 @@
     font-size: 16px;
     margin-bottom: 0;
     @media only screen and (max-width: $break-sm) {
-      font-size: 14px;
+      font-size: 13px;
     }
   }
   .info-flex-container {

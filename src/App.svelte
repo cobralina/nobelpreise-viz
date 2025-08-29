@@ -23,15 +23,3 @@
 <main>
   <VizContainer />
 </main>
-
-<!-- {#if data.length}
-  <ul>
-    {#each data as row}
-      <div class="showrow" style="background-color: {row.color};">
-        {row.jahr} – {row.fach} – {row.name} - {row.thema} - Herkunftsland: {row.herkunftsland}
-      </div>
-    {/each}
-  </ul>
-{:else}
-  <p>Lade Daten...</p>
-{/if} -->

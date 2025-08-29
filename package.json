@@ -26,6 +26,7 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
+    "@faz/dv-globals": "^1.0.0",
     "siema": "^1.5.1"
   }
 }
