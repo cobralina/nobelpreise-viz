@@ -34,6 +34,7 @@
 </script>
 
 <!-- Visualisierung der gendern -->
+<br /><br /><br /><br />
 <div class="all-country-groups">
   {#each Object.entries(phyllogenderGroups) as [gender, group]}
     <div class="gender-group">

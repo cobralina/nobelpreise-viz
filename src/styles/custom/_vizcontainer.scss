@@ -15,7 +15,7 @@
   }
 
   .siema-item {
-    height: 650px;
+    height: 700px;
     width: 100%;
     position: relative;
     h2 {
@@ -28,11 +28,22 @@
         font-weight: 400;
       }
     }
+    h3 {
+      font-family: $sans;
+      text-align: center;
+      font-size: 1em;
+      font-weight: 400;
+      margin-top: -10px;
+      @media only screen and (max-width: $break-sm) {
+        font-size: 0.8em;
+        font-weight: 400;
+      }
+    }
     @media only screen and (max-width: $break-sm) {
-      height: 450px;
+      height: 500px;
     }
     @media only screen and (max-width: 400px) {
-      height: 350px;
+      height: 400px;
     }
   }
 }
@@ -55,13 +66,12 @@ input {
   margin-right: 5px;
 
   position: relative;
-  top: 4px;
 }
 input:checked {
   background-color: grey;
   width: 10px;
   height: 10px;
-  top: 3px;
+  top: -1px;
 }
 
 .btn-back,
@@ -96,4 +106,9 @@ input:checked {
   @media (prefers-color-scheme: dark) {
     background-image: url("/img/arrow-forward-dm.svg");
   }
+}
+
+.disabled {
+  opacity: 0.3;
+  cursor: default;
 }

@@ -12,36 +12,29 @@
     const unsubscribe = dataStore.subscribe((value) => {
       data = value;
 
-      // 1. Häufigkeiten zählen
       const countryCounts: { [key: string]: number } = {};
       data.forEach((d) => {
         const country = d.herkunftsland || "unbekannt";
         countryCounts[country] = (countryCounts[country] || 0) + 1;
       });
 
-      // 2. Top 6 Länder bestimmen
       topCountries = Object.entries(countryCounts)
         .sort((a, b) => b[1] - a[1])
         .slice(0, 6)
         .map(([country]) => country);
 
-      // 3. Daten aufteilen
       countryGroups = {};
       topCountries.forEach((country) => {
         countryGroups[country] = [];
       });
-      //countryGroups["Sonstige"] = [];
 
       data.forEach((d) => {
         const country = d.herkunftsland || "unbekannt";
         if (topCountries.includes(country)) {
           countryGroups[country].push(d);
-        } /* else {
-          countryGroups["Sonstige"].push(d);
-        } */
+        }
       });
-      console.log("Country groups prepared:", countryGroups);
-      // 4. Phyllotaxis Layout für jedes Land
+
       phylloCountryGroups = {};
       Object.entries(countryGroups).forEach(([country, group]) => {
         phylloCountryGroups[country] = layoutPhyllotaxis(group, {
@@ -54,6 +47,7 @@
 </script>
 
 <!-- Visualisierung der Ländergruppen -->
+<br /><br /><br /><br />
 <div class="all-country-groups">
   {#each Object.entries(phylloCountryGroups) as [country, group]}
     <div class="country-group">

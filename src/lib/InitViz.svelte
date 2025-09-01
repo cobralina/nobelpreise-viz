@@ -47,7 +47,7 @@
 
 <Infolayer {selectedPerson} />
 
-<svg viewBox="0 0 100 100">
+<svg viewBox="0 0 100 100" style="scale:0.9">
   <g>
     {#if window.innerWidth < 600}
       <!--only viz without interactivity -->
@@ -68,7 +68,7 @@
         <circle
           cx={d.x}
           cy={d.y}
-          r={d.r}
+          r={d.r * 0.8}
           fill={d.color}
           on:click={() => setPersonFromCircle(d)}
           style="cursor: pointer"

@@ -13,6 +13,7 @@
   opacity: 0.9;
   border-radius: 5px;
   padding: 10px;
+  z-index: 50;
   @media only screen and (max-width: $break-sm) {
     top: 50px;
     max-height: 350px;

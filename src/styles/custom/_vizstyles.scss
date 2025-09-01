@@ -6,7 +6,7 @@
     opacity: 1;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.7;
   }
   100% {
     opacity: 1;
@@ -46,7 +46,7 @@
     text-align: center;
     font-size: 0.9em;
     font-weight: 600;
-    margin-top: -80px;
+    margin-top: -80px !important;
     margin-bottom: 80px;
     padding: 0 20px;
 
@@ -67,7 +67,7 @@
     text-align: center;
     font-size: 0.8em;
     font-weight: 600;
-    margin-top: -260px;
+    margin-top: -250px;
     @media only screen and (max-width: $break-sm) {
       margin-top: -190px;
       margin-left: 10px;
@@ -116,5 +116,77 @@
   }
   svg {
     height: 50px;
+  }
+}
+
+.timeline-outer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 570px;
+  width: 100%;
+  position: relative;
+  @media only screen and (max-width: $break-sm) {
+    height: 450px;
+  }
+}
+.timeline-inner {
+  overflow-y: auto;
+  scrollbar-width: none;
+  margin: auto;
+  margin-top: 20px;
+  height: 650px;
+  width: 100%;
+  @media only screen and (max-width: $break-sm) {
+    height: 400px;
+  }
+  h2 {
+    margin: 0 auto;
+    width: 100%;
+    margin-top: -5px;
+  }
+  svg {
+    margin-top: 0;
+    height: 50px;
+  }
+}
+.scroll-btn {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  opacity: 1;
+  pointer-events: auto;
+  background: none;
+  transition: background 0.2s;
+  @media only screen and (max-width: $break-sm) {
+    height: 70px;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--dv-grey-900);
+  }
+}
+
+.scroll-btn.up {
+  background: linear-gradient(to bottom, var(--dv-white) 60%, transparent 100%);
+  top: 0;
+  margin-top: -20px;
+  @media only screen and (max-width: $break-sm) {
+    margin-top: -10px;
+  }
+}
+.scroll-btn.down {
+  background: linear-gradient(to top, var(--dv-white) 80%, transparent 100%);
+  bottom: 0;
+  margin-bottom: -60px;
+  @media only screen and (max-width: $break-sm) {
+    margin-bottom: -30px;
   }
 }

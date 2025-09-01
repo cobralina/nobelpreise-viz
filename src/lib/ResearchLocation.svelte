@@ -54,6 +54,7 @@
 </script>
 
 <!-- Visualisierung der Standortgruppen -->
+<br /><br /><br /><br />
 <div class="all-country-groups">
   {#each Object.entries(phylloresearchGroups) as [researchLocation, group]}
     <div class="country-group" style="margin-top:-40px;">

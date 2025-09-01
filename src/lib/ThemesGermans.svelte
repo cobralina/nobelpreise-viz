@@ -35,6 +35,7 @@
 </script>
 
 <!-- Visualisierung der Themen -->
+<br /><br /><br />
 <div class="all-country-groups">
   {#each Object.entries(phylloThemeGroups) as [theme, group]}
     <div class="country-group">

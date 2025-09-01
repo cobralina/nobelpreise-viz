@@ -21,6 +21,8 @@
     vita: "",
   };
 
+  let thisYear: string = "";
+
   // Animation für den aktuell gehoberten Kreis
   let hoveredIndex: number | null = null;
   let animatedRadius = tweened(0, { duration: 200, easing: cubicOut });
@@ -55,10 +57,13 @@
     const unsubscribe = dataStore.subscribe((value) => {
       data = value;
       phylloThemeData = layoutPhyllotaxis(data, { spacing: 1.7 });
-      // Setze animierten Radius initial auf den Radius des ersten deutschen Kreises (falls vorhanden)
-      const firstDE = phylloThemeData.find(
-        (d) => d.herkunftsland === "Deutschland"
+      thisYear = phylloThemeData.reduce(
+        (max, d) => (d.jahr > max ? d.jahr : max),
+        "0"
       );
+      console.log("thisYear:", thisYear);
+
+      const firstDE = phylloThemeData.find((d) => d.jahr === thisYear);
       animatedRadius.set(firstDE ? firstDE.r : 0);
     });
     return unsubscribe;
@@ -70,11 +75,11 @@
 <svg viewBox="0 0 100 100" style="scale:0.9">
   <g>
     {#each phylloThemeData as d, i}
-      {#if d.herkunftsland === "Deutschland"}
+      {#if d.jahr === thisYear}
         <circle
           cx={d.x}
           cy={d.y}
-          r={hoveredIndex === i ? $animatedRadius * 1.3 : d.r * 1.3}
+          r={hoveredIndex === i ? $animatedRadius * 1.5 : d.r * 1.8}
           fill={d.color}
           fill-opacity={1}
           on:click={() => setPersonFromCircle(d)}
@@ -89,7 +94,7 @@
           cy={d.y}
           r={d.r * 0.8}
           fill={d.color}
-          fill-opacity={0.5}
+          fill-opacity={0.8}
         />
       {/if}
     {/each}

@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "@faz/dv-globals": "^1.0.0",
+    "flowbite-svelte": "^1.13.4",
+    "flowbite-svelte-icons": "^3.0.0",
     "siema": "^1.5.1"
   }
 }

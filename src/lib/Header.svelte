@@ -1,12 +1,12 @@
 <script lang="ts">
   export let headline: string = "Die Nobelpreise";
   export let subline: string =
-    "Jeder Punkt steht für eine Person, die seit 1901 einen Nobelpreis erhalten hat. Die Farbe zeigt das Fachgebiet, der Standort die Institution, an der die Person hauptsächlich geforscht hat. Mit Klick auf den Punkt erhalten Sie Informationen zu dem Preisträger.";
+    "Der Nobelpreis wird seit 1901 in den Kategorien Physik, Chemie, Medizin, Literatur, Frieden und seit 1969 auch in Wirtschaftswissenschaften verliehen. Diese Visualisierung zeigt alle Preisträger und einige Besonderheiten im Überblick.";
 </script>
 
 <div class="header">
   <div class="headline">{headline}</div>
-  <div class="introtext">
+  <!--   <div class="introtext">
     {subline}
-  </div>
+  </div> -->
 </div>
